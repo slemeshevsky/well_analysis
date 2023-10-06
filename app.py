@@ -16,7 +16,7 @@ def load_data(meas_file, data_file):
     measurements = {}
     computations = {}
     for well in wells:
-        measurements[well] = pd.read_excel(meas_file, sheet_name=well, index_col=0)
+        measurements[well] = pd.read_excel(meas_file, sheet_name=well)
         computations[well] = pd.read_excel(data_file, sheet_name=well)
     #st.write("В замерах и результатах :red[нет совпадающих скважин! Загрузите другие файлы.]")
     return wells, measurements, computations
